@@ -18,5 +18,9 @@ window.addEventListener('click', (event) => {
     if (parseInt(counter.innerText) > 1) {
       counter.innerText = --counter.innerText
     }
+    //якщо товар в кошику i якщо в кошику к-ть товар 0 то видаляємо
+    else if (event.target.closest('.cart-wrapper') && parseInt(counter.innerText) === 1) {
+      event.target.closest('.cart-item').remove()
+    }
   }
 })

@@ -6,3 +6,4 @@ I had ready-html start project
 2. Add counter for all products
 3. Add products to cart(what product client will buy)
 4. Summing equel products in the cart
+5. Delete products from cart
