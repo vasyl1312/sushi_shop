@@ -27,38 +27,41 @@ window.addEventListener('click', (event) => {
     } else {
       //для додавання в html, скопіювали з індекс html-code щоб додати відповідні значення
       const cardItemHtml = `<div class="cart-item" data-id="${productInfo.id}">
-    <div class="cart-item__top">
-      <div class="cart-item__img">
-        <img src="${productInfo.imgSrc}" alt="${productInfo.title}">
-      </div>
-      <div class="cart-item__desc">
-        <div class="cart-item__title">${productInfo.title}</div>
-        <div class="cart-item__weight">${productInfo.itemsInBox} / ${productInfo.weight}</div>
-
-        <!-- cart-item__details -->
-        <div class="cart-item__details">
-
-          <div class="items items--small counter-wrapper">
-            <div class="items__control" data-action="minus">-</div>
-            <div class="items__current" data-counter="">${productInfo.counter}</div>
-            <div class="items__control" data-action="plus">+</div>
+        <div class="cart-item__top">
+          <div class="cart-item__img">
+            <img src="${productInfo.imgSrc}" alt="${productInfo.title}">
           </div>
+          <div class="cart-item__desc">
+            <div class="cart-item__title">${productInfo.title}</div>
+            <div class="cart-item__weight">${productInfo.itemsInBox} / ${productInfo.weight}</div>
 
-          <div class="price">
-            <div class="price__currency">${productInfo.price}</div>
+            <!-- cart-item__details -->
+            <div class="cart-item__details">
+
+              <div class="items items--small counter-wrapper">
+                <div class="items__control" data-action="minus">-</div>
+                <div class="items__current" data-counter="">${productInfo.counter}</div>
+                <div class="items__control" data-action="plus">+</div>
+              </div>
+
+              <div class="price">
+                <div class="price__currency">${productInfo.price}</div>
+              </div>
+
+            </div>
+            <!-- // cart-item__details -->
+
           </div>
-
         </div>
-        <!-- // cart-item__details -->
-
-      </div>
-    </div>
-  </div>`
+      </div>`
 
       //відобразити товар в кошику(insertAdjacentHTML дозволяє вставляти в себе шматок розмітки)
       cartWrapper.insertAdjacentHTML('beforeend', cardItemHtml)
     }
     //щоб після додавання в кошик продукти мали каунт 1 а не ту к-ть яку додали в кошик
     card.querySelector('[data-counter]').innerText = '1'
+
+    //відображення статусу кошика(empty/not empty)
+    toggleCartStatus()
   }
 })

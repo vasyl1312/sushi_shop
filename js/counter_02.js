@@ -21,6 +21,9 @@ window.addEventListener('click', (event) => {
     //якщо товар в кошику i якщо в кошику к-ть товар 0 то видаляємо
     else if (event.target.closest('.cart-wrapper') && parseInt(counter.innerText) === 1) {
       event.target.closest('.cart-item').remove()
+
+      //відображення статусу кошика(empty/not empty)
+      toggleCartStatus()
     }
   }
 })

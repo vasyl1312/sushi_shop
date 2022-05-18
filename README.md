@@ -7,3 +7,4 @@ I had ready-html start project
 3. Add products to cart(what product client will buy)
 4. Summing equel products in the cart
 5. Delete products from cart
+6. Work with cart when it is empty
