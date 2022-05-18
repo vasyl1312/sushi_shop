@@ -8,3 +8,4 @@ I had ready-html start project
 4. Summing equel products in the cart
 5. Delete products from cart
 6. Work with cart when it is empty
+7. Hide and show box the Order
