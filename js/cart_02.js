@@ -63,5 +63,8 @@ window.addEventListener('click', (event) => {
 
     //відображення статусу кошика(empty/not empty)
     toggleCartStatus()
+
+    //рахуємо загал суму цін товарів в кошику
+    calcCartPrice()
   }
 })

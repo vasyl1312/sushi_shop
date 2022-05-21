@@ -24,6 +24,15 @@ window.addEventListener('click', (event) => {
 
       //відображення статусу кошика(empty/not empty)
       toggleCartStatus()
+
+      //перерахунок ціни
+      calcCartPrice()
     }
+  }
+
+  // чи клік + - в кошику для підрахунку ціни
+  if (event.target.hasAttribute('data-action') && event.target.closest('.cart-wrapper')) {
+    //перерахунок ціни
+    calcCartPrice()
   }
 })

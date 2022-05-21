@@ -1,12 +1,16 @@
 calcCartPrice = () => {
-  const cartItems = document.querySelectorAll('.cart-item')
-  let totalPrice = 0
+  const cartWrapper = document.querySelector('.cart-wrapper')
+  const priceElements = cartWrapper.querySelectorAll('.price__currency')
 
-  cartItems.forEach((item) => {
-    const amountEl = item.querySelector('[data-counter]').innerText
-    const priceEl = item.querySelector('.price__currency').innerText
-    const currentPrice = parseInt(amountEl) * parseInt(priceEl)
+  const totalPriceEl = document.querySelector('.total-price')
 
-    totalPrice += currentPrice
+  //загал ціна продуктів
+  let priceTotal = 0
+
+  priceElements.forEach((item) => {
+    const amountEl = item.closest('.cart-item').querySelector('[data-counter]')
+    priceTotal += parseInt(item.innerText) * parseInt(amountEl.innerText)
   })
+  //відображення ціни на сторінці
+  totalPriceEl.innerText = priceTotal
 }
