@@ -9,3 +9,4 @@ I had ready-html start project
 5. Delete products from cart
 6. Work with cart when it is empty
 7. Hide and show box the Order
+8. Sum price for all products
