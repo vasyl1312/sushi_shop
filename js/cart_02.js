@@ -65,6 +65,6 @@ window.addEventListener('click', (event) => {
     toggleCartStatus()
 
     //рахуємо загал суму цін товарів в кошику
-    calcCartPrice()
+    calcCartPriceAndDelivery()
   }
 })

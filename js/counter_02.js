@@ -26,13 +26,13 @@ window.addEventListener('click', (event) => {
       toggleCartStatus()
 
       //перерахунок ціни
-      calcCartPrice()
+      calcCartPriceAndDelivery()
     }
   }
 
   // чи клік + - в кошику для підрахунку ціни
   if (event.target.hasAttribute('data-action') && event.target.closest('.cart-wrapper')) {
     //перерахунок ціни
-    calcCartPrice()
+    calcCartPriceAndDelivery()
   }
 })

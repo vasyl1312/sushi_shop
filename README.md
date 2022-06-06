@@ -11,3 +11,4 @@ I had ready-html start project
 7. Hide and show box the Order
 8. Sum price for all products
 9. Sum and show price in cart when we click on "Add to cart"
+10. Work with delivery cost
